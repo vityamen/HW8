@@ -1,7 +1,7 @@
 from write_data import count_data
 
 def input_data():
-    dict = dict()
+    dict = {}
     Id = count_data("name.csv") 
     dict["id"] = Id
     dict["surname"] = input('Введите фамилию: ')

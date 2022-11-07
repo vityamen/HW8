@@ -9,27 +9,27 @@ def start():
     2 - Добавить ученика в БД;\n\
     3 - Найти ученика в БД;\n\
     4 - Выход.")
+    
     ch = input("Введите цифру: ")
     while True:
         if ch == '1':
-            data = read_data()
-            print_data(data)
-            start()
+                data = read_data()
+                print_data(data)
+                start()
         elif ch == '2':
-            push_data()
-            start()
+                push_data()
+                start()
         elif ch == '3':
-            info = input("Введите данные для поиска: ")
-            data = read_data()
-            item = search_data(info, data)
-            if item != None:
-                print_data(item, True)
-            else:
-                print("Данные не обнаружены!")                
-            start()
-        elif ch == '4':
-            print("Работа с БД окончена. До свидания!")
-            break
+                info = input("Введите данные для поиска: ")
+                data = read_data()
+                item = search_data(info, data)
+                if item != None:
+                    print_data(item, True)
+                else:
+                    print("Данные не обнаружены!")                
+                start()
         else:
-            print("Введите корректную цифру!")
-            start()
+            print("Работа с БД окончена. До свидания!")
+        return False
+            
+            
